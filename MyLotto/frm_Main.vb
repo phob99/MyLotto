@@ -138,4 +138,12 @@ Public Class frm_Main
             .WindowState = FormWindowState.Maximized
         End With
     End Sub
+
+    Private Sub ToolStrip_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip.ItemClicked
+
+    End Sub
+
+    Private Sub frm_Main_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CallForm(frm_EnterData)
+    End Sub
 End Class

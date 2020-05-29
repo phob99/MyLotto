@@ -84,23 +84,32 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\lottodb.mdf;I"& _ 
-            "ntegrated Security=True")>  _
-        Public ReadOnly Property lottodbConnectionString() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=MyLottoDB;User ID=sa;Password=15022525")>  _
+        Public ReadOnly Property LottoDB() As String
             Get
-                Return CType(Me("lottodbConnectionString"),String)
+                Return CType(Me("LottoDB"),String)
             End Get
         End Property
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=PHOBRUKCOM-PC\sqlexpress;Initial Catalog=LottoDB;Persist Security Inf"& _ 
-            "o=True;User ID=sa;Password=15022525")>  _
-        Public ReadOnly Property LottoDBConnectionString1() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Tahoma, 12pt")>  _
+        Public ReadOnly Property ValidateFont() As Global.System.Drawing.Font
             Get
-                Return CType(Me("LottoDBConnectionString1"),String)
+                Return CType(Me("ValidateFont"),Global.System.Drawing.Font)
             End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Red")>  _
+        Public Property ValidateColor() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("ValidateColor"),Global.System.Drawing.Color)
+            End Get
+            Set
+                Me("ValidateColor") = value
+            End Set
         End Property
     End Class
 End Namespace
